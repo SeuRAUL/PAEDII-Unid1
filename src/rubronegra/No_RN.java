@@ -13,5 +13,12 @@ public class No_RN extends No{
 	}
 	
 	public boolean color;
+	
+	private void mudaCor(){
+		if (this.color) // se preto
+			this.color = RED;
+		else
+			this.color = BLACK;
+	}
 
 }

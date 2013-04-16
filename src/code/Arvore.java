@@ -7,7 +7,7 @@ public class Arvore {
 	}
 	
 	
-	/* Relativos à inserção */
+	/* Relativos Ã  inserÃ§Ã£o */
 	public void inserir(int chave){
 		inserirInternamente(chave, this.raiz);
 	}
@@ -28,7 +28,7 @@ public class Arvore {
 		}
 	}
 	
-	/* Impressão */
+	/* ImpressÃ£o */
 	public void imprimir(No raiz){
 		if(raiz == null) return;
 		System.out.println(raiz.chave);
@@ -40,7 +40,7 @@ public class Arvore {
 		No index = buscar(chave, this.raiz);
 		
 		if(index == null){
-			System.out.println("Nó inexistente na árvore!");
+			System.out.println("Nï¿½ inexistente na ï¿½rvore!");
 			return;
 		}else if(index.noDir == null && index.noEsq == null){
 			index = null;
@@ -70,6 +70,6 @@ public class Arvore {
 	}
 	
 	
-	/* Variáveis */
+	/* VariÃ¡veis */
 	public No raiz;
 }

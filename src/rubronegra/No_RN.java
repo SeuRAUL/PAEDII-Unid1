@@ -9,7 +9,7 @@ public class No_RN extends No{
 	
 	public No_RN(int chave, No pai) {
 		super(chave, pai);
-		this.color = RED;
+		this.color = RED; // Novo nó sempre é vermelho
 	}
 	
 	public boolean color;

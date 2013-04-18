@@ -9,13 +9,16 @@ public class Main {
 		// TODO Auto-generated method stub
 		Arvore arv = new Arvore(5);
 		arv.inserir(4);
-		arv.inserir(6);
-		arv.inserir(9);
 		arv.inserir(2);
+		arv.inserir(5);
+		arv.inserir(1);
+		arv.inserir(3);
 		
 		arv.imprimir(arv.raiz);
-		System.out.println("Removendo...\n\n");
-		arv.remover(6);
+		
+		arv.rotacionarDir(arv.buscar(2, arv.raiz)); // testando rotação direita
+		/*System.out.println("Removendo...\n\n");
+		arv.remover(6);*/
 		
 		arv.imprimir(arv.raiz);
 		

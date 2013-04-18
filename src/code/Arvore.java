@@ -1,5 +1,7 @@
 package code;
 
+import rubronegra.No_RN;
+
 public class Arvore {
 	
 	public Arvore(int chave){
@@ -12,18 +14,20 @@ public class Arvore {
 		inserirInternamente(chave, this.raiz);
 	}
 	
-	private void inserirInternamente(int chave, No index){
+	public No inserirInternamente(int chave, No index){
 		if(chave > index.chave){
 			if(index.noDir != null){
 				inserirInternamente(chave, index.noDir);
 			}else{
 				index.noDir = new No(chave, index);
+				return index.noDir;
 			}
 		}else if(chave < index.chave){
 			if(index.noEsq != null){
 				inserirInternamente(chave, index.noEsq);
 			} else {
 				index.noEsq = new No(chave, index);
+				return index.noEsq;
 			}
 		}
 	}
@@ -67,6 +71,13 @@ public class Arvore {
 		}
 		
 		return null;
+	}
+	
+	public void rotacionarDir(No no){ // tem que receber o pai do novo nó
+		no.noDir.noPai = no.noPai;	//filho dir chama avô de pai
+		no.noPai.noEsq = no.noDir;	//pai chama neto dir de filho esq
+		no.noDir = no.noPai;		// chamo pai de filho Dir
+		no.noPai = no.noPai.noPai;	// chamo avô de pai
 	}
 	
 	
